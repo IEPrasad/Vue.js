@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Number Comparison</title>
+    <style>
+        .red-box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .blue-box {
+            width: 100px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <label for="first-number">Enter first number:</label>
+    <input type="number" id="first-number" v-model="firstNumber">
+    <label for="second-number">Enter second number:</label>
+    <input type="number" id="second-number" v-model="secondNumber">
+
+    <div v-if="firstNumber > secondNumber" class="red-box"></div>
+    <div v-else class="blue-box"></div>
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            firstNumber: 0,
+            secondNumber: 0
+        }
+    });
+</script>
+
+</body>
+</html>
