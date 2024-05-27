@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue.js If-Else Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="seen">Now you see me!</p>
+    <p v-else>Now you don't!</p>
+    <button @click="toggleSeen">Toggle</button>
+</div>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        seen: true
+    },
+    methods: {
+        toggleSeen() {
+            this.seen = !this.seen;
+        }
+    }
+});
+</script>
+</body>
+</html>
