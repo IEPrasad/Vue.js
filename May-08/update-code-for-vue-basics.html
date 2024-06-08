@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <p>This is the update version of before code: {{name}} </p>
+    <ol>
+      <li v-for='subj in subjects'> {{ subj }} </li>
+    </ol> 
+  </div>
+
+</body>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        name: 'Yes this is from Vue.js',
+        subjects: ['maths', 'sceience', 'arts']
+      }
+    });
+  </script>
+
+</html>
+
+
+<!-- The update and advance version of above code---
+this is the easy way to get the items from the list --- -->
+
