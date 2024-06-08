@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vue Basics</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <p>This is the vuejs example
+      ---- {{name}}
+    </br>
+    <ol>
+      <li>{{sujects[0]}}</li>
+      <li>{{sujects[1]}}</li>
+      <li>{{sujects[2]}}</li>
+    </ol>
+    </p>
+  </div>
+</body>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      name: "Hii I'm Isuru Eranda Prasad",
+      sujects: ['maths', 'science', 'arts']
+    }
+  })
+</script>
+</html>
+
+
+
+
+<!-- This code for the understand of the basics of the Vue.js 
+ because you don't even remember basics of the Vue.js -->
