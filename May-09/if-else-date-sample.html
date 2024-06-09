@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>In VueJS Practice If Else</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <label for="fDate">Enter first date: </label>
+        <input type="date" id="fFate" v-model='firstDate'>
+
+        <label for="sDate">Enter second date: </label>
+        <input type="date" id="sDate" v-model="secondDate">
+
+        <label for="tDate">Enter third date: </label>
+        <input type="date" id="tDate" v-model="thirdDate">
+<!-- 
+        <div v-if="firstDate > secondDate">
+          <p>First Date is greater than second date.</p>
+        </div>
+        <div v-else>
+          <p>Second Date is greater than the first date.</p>
+        </div>
+
+        <div v-if="secondDate > thirdDate">
+          <p>Second Date is greater than third date.</p>
+        </div>
+        <div v-else>
+          <p>Third Date is greater than the second date.</p>
+        </div>
+
+        <div v-if="firstDate > thirdDate">
+          <p>First Date is greater than the third date.</p>
+        </div>
+        <div v-else>
+          <p>Third date is greater than the first date.</p>
+        </div> -->
+
+        <div v-if="firstDate > secondDate && firstDate > thirdDate ">
+          <p>First Date is the New Date.</p>
+        </div>
+
+        <div v-if="secondDate > firstDate && secondDate > thirdDate">
+          <p>Second Date is the New Date.</p>
+        </div>
+
+        <div v-if ="thirdDate > firstDate && thirdDate > secondDate">
+          <p>Third Date is the New Date.</p>
+        </div>
+
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                firstDate: null,
+                secondDate: null,
+                thirdDate: null
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!-- There is no any close tag for the input tag -->
