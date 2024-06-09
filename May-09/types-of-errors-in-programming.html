@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Types of Errors</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <h2>The most Common Types of Errors in Programming and How to Avoid Them</h2>
+  <div></div>
+  <ol  id="app">
+    <li v-for="error in errors">{{ error }}</li>
+  </ol>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        errors: ['Syntax Errors', 'Logic Errors', 'Compliation Errors', 'Runtime Errors', 'Arithmetic Errors', 'Resource Errors', 'Interface Errors']
+      }
+    });
+  </script>
+</body>
+</html>
