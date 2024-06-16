@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vue.js v-if, v-else-if, v-else Example</title>
+  <!-- Include Vue.js library -->
+   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  
+  <div id="app">
+    <p>Current Status: {{ status }} </p>
+
+    <!-- Conditional Rendering -->
+    <div v-if="status === 'success'">
+      <p>Operation was successful!</p>
+    </div>
+    <div v-else-if="status === 'error'">
+      <p>There was an error with the operation.</p>
+    </div>
+    <div v-else-if="status === 'loading'">
+      <p>Loading... Please wait.</p>
+    </div>
+    <div v-else>
+      <p>Status unknown.</p>
+    </div>
+
+
+    <!-- Buttons to Change Status -->
+     <button @click="status = 'success'">Set Success</button>
+     <button @click="status = 'error'">Set Error</button>
+     <button @click="status = 'loading'">Set Loading</button>
+     <button @click="status = 'unknown'">Set Unknown</button>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app', 
+      data: {
+        status: 'loading' // Initial staus
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
